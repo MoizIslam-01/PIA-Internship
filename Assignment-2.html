@@ -1,108 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Exact Layout</title>
-<style>
-  :root{
-    --border:#060606;
-    --header:#899BAC;
-    --slider:#E0E0E0;
-    --spacer:#AF8E86;
-    --section:#84B4A8;
-    --section-alt:#C87B78;     /* third-row background */
-    --tile:#B3A889;
-    --article:#8E87B0;
-    --stack-border:#6FD1C9;     /* cyan frame */
-    --stack-bg:#B2E6DF;
-    --footer:#494C4C;
-  }
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        
+      }
+      #header{
+        background-color: #899BAC;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        
+      }
+      #Slider-Images{
+        background-color: #E0E0E0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        height: 200px;
+      }
+      #spacer{
+        background-color: #AF8E86;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+      #footer{
+        background-color: #E0E0E0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+      #section1{
+        background-color: #84B4A8;
+        display: flex;
+        width: 100%;
+        gap: 100px;
+        
+        
+      }
+      #art1, #art2, #art3 {
+        background-color: #8E87B0;
+        width: 400px;
+        height: 300px;
+        margin: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
 
-  body{margin:0;background:#000;display:flex;justify-content:center;}
-  .frame{
-    width:453px; border:8px solid var(--border); background:#fff;
-    font-family:Arial, Helvetica, sans-serif; text-align:center;
-  }
+        
+      }
+      #section2{
+        background-color: #B3A889;
+        display: flex;
+        width: 100%;
+        justify-content:space-between;
+        
+      }
+      #art4, #art5, #art6, #art7 {
+        background-color: #8E87B0;
+        width: 25%;
+        height: 200px;
+        margin: 20px;
+        text-align: center;
+        
+      }
+  </style>
 
-  .bar{padding:22px 0;font-weight:600}
-  .header{background:var(--header)}
-  .slider{background:var(--slider)}
-  .spacer{background:var(--spacer)}
-
-  .section{
-    background:var(--section);
-    padding:16px; display:flex; flex-wrap:wrap;
-    gap:18px; justify-content:space-between;
-  }
-  .tile{background:var(--tile); padding:12px; flex:1 1 0}
-  .article{
-    background:var(--article); height:78px;
-    display:flex; align-items:center; justify-content:center;
-    color:#111; font-weight:600;
-  }
-
-  /* ---------- FIXED THIRD ROW (big + two stacked) ---------- */
-  .third{
-    background:var(--section-alt);
-    padding:16px; display:flex; gap:18px; align-items:stretch;
-  }
-  .third .leftBig{flex:2; display:flex}
-  .third .leftBig .article{
-    height:200px; width:100%;               /* fixed height to match right stack */
-  }
-  .third .rightStack{
-    flex:1; box-sizing:border-box;
-    border:4px solid var(--stack-border);
-    background:var(--stack-bg);
-    padding:10px; display:flex; flex-direction:column; gap:10px;
-    height:200px;                              /* EXACTLY matches left height */
-  }
-  .third .rightStack .article{flex:1; height:auto}
-
-  /* Last row stays like the first/second */
-  footer{background:var(--footer); color:#fff; padding:12px 0; font-weight:600}
-</style>
-</head>
-<body>
-  <div class="frame">
-    <div class="bar header">Header</div>
-    <div class="bar slider">Slider-Images</div>
-    <div class="bar spacer">Spacer</div>
-
-    <!-- Row 1 -->
-    <div class="section">
-      <div class="tile"><div class="article">Article</div></div>
-      <div class="tile"><div class="article">Article</div></div>
-      <div class="tile"><div class="article">Article</div></div>
-    </div>
-
-    <!-- Row 2 -->
-    <div class="section">
-      <div class="tile"><div class="article">Article</div></div>
-      <div class="tile"><div class="article">Article</div></div>
-      <div class="tile"><div class="article">Article</div></div>
-      <div class="tile"><div class="article">Article</div></div>
-    </div>
-
-    <!-- Row 3 (fixed alignment) -->
-    <div class="third">
-      <div class="leftBig">
-        <div class="article">Article</div>
-      </div>
-      <div class="rightStack">
-        <div class="article">Article</div>
-        <div class="article">Article</div>
-      </div>
-    </div>
-
-    <!-- Row 4 -->
-    <div class="section">
-      <div class="tile"><div class="article">Article</div></div>
-      <div class="tile"><div class="article">Article</div></div>
-      <div class="tile"><div class="article">Article</div></div>
-    </div>
-
-    <footer>Copyright</footer>
+  </head>
+  
+  <div id="header">
+    <h2>
+      Header
+    </h2>
   </div>
-</body>
+  <body>
+    <div id="Slider-Images">
+      <h2 style="margin-top: 90px;">
+        Slider-Images
+      </h2>
+    </div>
+    <div id="spacer">
+      <h2>
+        Spacer
+      </h2>
+    </div>
+    <div id="section1">
+      <div id="art1"><h2 style="margin-top: 150px;">Article</h2></div>
+      <div id="art2"><h2 style="margin-top: 150px;">Article</h2></div>
+      <div id="art3"><h2 style="margin-top: 150px;">Article</h2></div>
+    </div>
+    <div id="section2">
+      <div id="art4"><h2 style="margin-top: 100px;">Article</h2></div>
+      <div id="art5"><h2 style="margin-top: 100px;">Article</h2></div>
+      <div id="art6"><h2 style="margin-top: 100px;">Article</h2></div>
+      <div id="art7"><h2 style="margin-top: 100px;">Article</h2></div>
+      <div></div>
+    </div>
+    <div id="section1">
+      <div id="art1"><h2 style="margin-top: 150px;">Article</h2></div>
+      <div id="art2"><h2 style="margin-top: 150px;">Article</h2></div>
+      <div id="art3"><h2 style="margin-top: 150px;">Article</h2></div>
+    </div>
+    <div id="footer">
+      <h2>
+        Copyright
+      </h2>
+    </div>
+  </body>
 </html>
