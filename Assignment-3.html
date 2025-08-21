@@ -3,50 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        body{
+        body {
             display: flex;
             justify-content: center;
-            background-color: #0A3256;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: radial-gradient(white, #0A3256);
+            font-family: Arial, sans-serif;
         }
-        #Signin{
-            width: 1000px;
-            height: 450px;
+
+        #Signin {
+            width: 900px;
             background-color: #FFFFFF;
-            border-radius: 20px;
-            margin: 100px auto;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
-        #form{
+
+        h1 {
+            color: #3A8FC2;
+            font-size: 22px;
+            margin: 0;
+        }
+
+        #form {
             display: flex;
             gap: 20px;
+            margin-top: 20px;
         }
-        #a,#c{
-            width: 500px;
-            height: 250px;
-            padding: 20px;
-            margin-top: 10px;
-            background-color: pink;
+
+        #a, #c {
+            flex: 1;
+            font-size: 14px;
+        }
+
+        #a {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            height: 35px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            border-color: #3A8FC2;
+            outline: none;
+        }
+
+        .login-btn {
+            background-color: #3A8FC2;
+            width: 150px;
+            height: 50px;
+            color: white;
+            font-size: 16px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: #2f79a5;
+        }
+
+        #c {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .social-btn {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .social-btn::before {
+            display: inline-block;
+            margin-right: 8px;
             font-size: 18px;
+            vertical-align: middle;
+        }
+
+        .facebook-btn::before {
+            font-family: "Font Awesome 5 Brands";
+            font-weight: 400;
+            content: "\f09a"; /* Facebook icon */
+        }
+
+        .twitter-btn::before {
+            font-family: "Font Awesome 5 Brands";
+            font-weight: 400;
+            content: "\f099"; /* Twitter icon */
+        }
+
+        .google-btn::before {
+            font-family: "Font Awesome 5 Brands";
+            font-weight: 400;
+            content: "\f1a0"; /* Google icon */
+        }
+        
+
+        .social-btn:hover {
+            background: #e6e6e6;
+        }
+
+        .separator {
+            height: 200px;
+            background-color: #ccc;
+            width: 1px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .footer a {
+            color: #3A8FC2;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        #bottom{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+        #options1,#options2{
+            display: flex;
+            flex-direction: row;
+            align-content: space-between;
+            gap: 60px;
+        }
+        #checks{
+            flex-direction: column;
+            margin-left: 100px;
+        }
+        p{
+            color: grey;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
     <div id="Signin">
-        <h1 style="color: #5BA5B7; margin-top: 0px;">Sign in</h1>
-        <div style="height:2px; background-color:grey; width:100%;margin-top: 20px;"></div>
+        <h1>Sign in</h1>
+        <div style="height:2px; background-color:#ccc; width:100%; margin-top: 10px;"></div>
         <div id="form">
-            <div id="a">a</div>
-            <div style="height:200px; background-color:grey; width:1px;margin-top: 20px;"></div>
-            <div id="c">c</div>
+            <div id="a">
+                <input type="text" placeholder="Put your login here">
+                <input type="password" placeholder="Enter your password">
+                <a href="#" style="font-size:13px; margin-top:10px;">Forgot password? Click here to restore</a>
+                <div id="bottom">
+                    <button class="login-btn">Login</button>
+                    <div id="checks">
+                        <div id="options1">
+                            <label for="showpass" style="color: grey;">Show password</label>
+                            <input type="checkbox" id="showpass">
+                        </div>
+                        <div id="options2" style="gap: 65px">    
+                            <label for="remember" style="color: grey;">Remember me</label>
+                            <input type="checkbox" id="remember">
+                        </div> 
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div id="c">
+                <p>You can also login with your social account</p>
+                <div style="flex-direction: row;">
+                    <button class="social-btn facebook-btn">Facebook</button>
+                    <button class="social-btn twitter-btn">Twitter</button>
+                    <button class="social-btn google-btn">Google</button>
+                </div>
+                
+
+                <p>Or use your OpenID to login</p>
+                <div style="display:flex; gap:5px;">
+                    <input type="text" placeholder="Your OpenID" style="flex:1;">
+                    <button class="login-btn" style="padding: 5px 15px;">Go</button>
+                </div>
+                <p>You may need to disable any popup blockers<br>to login with above sites.
+                </p>
+            </div>
         </div>
-        <div style="height:2px; background-color:grey; width:100%;margin-top: 20px;"></div>
-        <div style="text-align: center;"><h2>Don't Register ? <a href="https://www.placeholder.com"> Register now!</a></h2></div>
+
+        <div style="height:2px; background-color:#ccc; width:100%; margin-top: 15px;"></div>
+        <div class="footer" style="color: grey;">Don’t registered? <a href="#">Register now!</a></div>
     </div>
-    
-</body>    
+</body>
 </html>
