@@ -17,7 +17,7 @@
 
         #Signin {
             width: 900px;
-            background-color: #FFFFFF;
+            background-color: #dbdada;
             border-radius: 10px;
             padding: 20px 30px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -70,11 +70,18 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
-        .login-btn:hover {
-            background-color: #2f79a5;
+        .go-btn {
+            background-color: #3A8FC2;
+            width: 50px;
+            height: 35px;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 2px;
+            margin-right: 2px;
         }
-
         #c {
             display: flex;
             flex-direction: column;
@@ -96,28 +103,9 @@
             font-size: 18px;
             vertical-align: middle;
         }
-
-        .facebook-btn::before {
-            font-family: "Font Awesome 5 Brands";
-            font-weight: 400;
-            content: "\f09a"; /* Facebook icon */
-        }
-
-        .twitter-btn::before {
-            font-family: "Font Awesome 5 Brands";
-            font-weight: 400;
-            content: "\f099"; /* Twitter icon */
-        }
-
-        .google-btn::before {
-            font-family: "Font Awesome 5 Brands";
-            font-weight: 400;
-            content: "\f1a0"; /* Google icon */
-        }
-        
-
-        .social-btn:hover {
-            background: #e6e6e6;
+        .social-btn:hover{
+            border-color: #2f79a5;
+            border-width: 2px;
         }
 
         .separator {
@@ -145,12 +133,13 @@
             display: flex;
             flex-direction: row;
             margin-top: 20px;
+            
         }
         #options1,#options2{
             display: flex;
             flex-direction: row;
-            align-content: space-between;
-            gap: 60px;
+            align-content: space-between;   
+            
         }
         #checks{
             flex-direction: column;
@@ -160,27 +149,56 @@
             color: grey;
             font-style: italic;
         }
+        input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            border-radius: 2px;
+            border: 2px solid #ffffff;
+            appearance: none;
+            background-color: #fff;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+        }
+        input[type="checkbox"]:checked {
+            background-color: #3A8FC2;
+            border: 2px solid #ffffff;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        
     </style>
 </head>
 <body>
     <div id="Signin">
         <h1>Sign in</h1>
+        <button style=" background-color: #dbdada; width: 20px; height: 20px; position: relative; left: 880px; top: -20px; border: none"><img src="corss.png" alt="" style="width: 15px; height: 15px; position: relative; left: -3px; top: 1px;"></button>
         <div style="height:2px; background-color:#ccc; width:100%; margin-top: 10px;"></div>
         <div id="form">
             <div id="a">
                 <input type="text" placeholder="Put your login here">
-                <input type="password" placeholder="Enter your password">
-                <a href="#" style="font-size:13px; margin-top:10px;">Forgot password? Click here to restore</a>
+                <div style="position: relative;">
+                    <input type="password" placeholder="Enter your password" id="password-input">
+                    <span id="caps-warning" style="position: absolute; right: 10px; top: 10px; color: grey;">
+                        Caps on! <img src="yellow dot.png" alt="">
+                    </span>
+                </div>
+                <div style="display: inline-flex;">
+                    <p>Forgot password?</p>
+                    <a href="#" style="font-size:13px; margin-top: 15px;padding-left: 5px;">Click here to restore</a>
+                </div>
+                
                 <div id="bottom">
                     <button class="login-btn">Login</button>
                     <div id="checks">
                         <div id="options1">
                             <label for="showpass" style="color: grey;">Show password</label>
-                            <input type="checkbox" id="showpass">
+                            <input type="checkbox" id="showpass" style="position: relative; left: 63px;">
                         </div>
-                        <div id="options2" style="gap: 65px">    
+                        <div id="options2" style="margin-top: 10px;">    
                             <label for="remember" style="color: grey;">Remember me</label>
-                            <input type="checkbox" id="remember">
+                            <input type="checkbox" id="remember" style="position: relative; left: 70px;">
                         </div> 
                     </div>
                     
@@ -190,16 +208,16 @@
             <div id="c">
                 <p>You can also login with your social account</p>
                 <div style="flex-direction: row;">
-                    <button class="social-btn facebook-btn">Facebook</button>
-                    <button class="social-btn twitter-btn">Twitter</button>
-                    <button class="social-btn google-btn">Google</button>
+                    <button class="social-btn facebook-btn"><div style="display: inline; padding-right: 10px;"><img src="facebook.png" height="17px" width="12px" alt=""></div>Facebook</button>
+                    <button class="social-btn twitter-btn"><div style="display: inline; padding-right: 10px;"><img src="twitter.png" height="17px" width="12px" alt=""></div>Twitter</button>
+                    <button class="social-btn google-btn"><div style="display: inline; padding-right: 10px;"><img src="google.png" height="17px" width="12px" alt=""></div>Google</button>
                 </div>
                 
 
                 <p>Or use your OpenID to login</p>
-                <div style="display:flex; gap:5px;">
-                    <input type="text" placeholder="Your OpenID" style="flex:1;">
-                    <button class="login-btn" style="padding: 5px 15px;">Go</button>
+                <div style="position: relative; display: flex;">
+                    <input type="text" placeholder="Your OpenID" style="width: 100%; padding-right: 60px;">
+                    <button class="go-btn" style="position: absolute; right: 0; top: 0;">Go</button>
                 </div>
                 <p>You may need to disable any popup blockers<br>to login with above sites.
                 </p>
@@ -209,5 +227,16 @@
         <div style="height:2px; background-color:#ccc; width:100%; margin-top: 15px;"></div>
         <div class="footer" style="color: grey;">Don’t registered? <a href="#">Register now!</a></div>
     </div>
+<script>
+    const passwordInput = document.getElementById('password-input');
+    const capsWarning = document.getElementById('caps-warning');
+    passwordInput.addEventListener('keyup', function(e) {
+        if (e.getModifierState && e.getModifierState('CapsLock')) {
+            capsWarning.style.display = 'inline';
+        } else {
+            capsWarning.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>
