@@ -13,6 +13,8 @@
             justify-content: space-between;
             padding: 16px 32px;
             font-family: Arial, sans-serif;
+            padding-left: 200px;
+            padding-right: 320px;
         }
         .navbar-left {
             font-size: 1.2rem;
@@ -51,6 +53,18 @@
             display: flex;
             align-items: center;
         }
+        .buy,.Sub{
+            background: white;
+            color: #222;
+            border: 2px solid black;
+            border-radius: 24px;
+            padding: 8px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
         .arrow-icon {
             margin-left: 8px;
         }
@@ -70,7 +84,7 @@
         }
         .reverse-get-started {
             background: #000000;
-            color: grey;
+            color: rgb(225, 225, 225);
             border: 2px solid rgb(255, 255, 255);
             border-radius: 24px;
             padding: 8px 24px;
@@ -103,9 +117,6 @@
             color: #888;
             margin-top: 2px;
         }
-        .features svg {
-            margin-bottom: 4px;
-        }
         .article-box {
             background-color: black;
             margin-left: 200px;
@@ -116,6 +127,34 @@
             padding: 40px 20px; 
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .shirt,.para{
+            background-color: white;
+            width: 50%;
+            height: 550px;
+            border-radius: 20px;
+        }
+        .article{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .About-us{
+            background-color: f5f5f5;
+            margin-left: 200px;
+            margin-top: 100px;
+            display: flex;
+            width: 900px;
+            flex-direction: row;
+            gap: 20px;    
+
+        }
+        .last-article{
+            width: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: grey;
+            font-size: 19px;
+            position: relative;
+            left: 150px;
         }
     </style>
 </head>
@@ -146,38 +185,38 @@
         <h2 style="font-family: Arial, Helvetica, sans-serif; margin-top: 0px; font-weight: lighter;">Create your</h2>
         <h1 style="font-family: Arial, Helvetica, sans-serif; margin-top: 2px; font-size: 50px; font-weight: lighter;">T-Shirt Design</h1>
         <button class="reverse-get-started">Get Started</button>
-        <a href="https://www.placeholder.com" style="color: #000000; margin-top: 20px;"> View how it works</a>
-        <p style="margin-top: 30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <a href="https://www.placeholder.com" style="color: #000000; margin-top: 20px; font-family: Arial, Helvetica, sans-serif;"> View how it works</a>
+        <p style="margin-top: 30px; font-family: Arial, Helvetica, sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
     </div>
     <div style="height:2px; background-color:rgb(227, 224, 224); width:100%;margin-top: 20px;"></div>
-    <p style="font-weight:bold; margin-left: 20px;">Our Features</p>
+    <p style="font-weight:bold; margin-left: 20px; font-family: Arial, Helvetica, sans-serif; position: relative;left: 180px;">Our Features</p>
     <div class="features">
-        <div class="feature">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#b6e94b" stroke-width="2"/><path d="M8 12a4 4 0 0 1 8 0" stroke="#b6e94b" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="2" fill="#b6e94b"/></svg>
+        <div class="feature" style="position: relative; left: 170px;">
+            <img src="1.png" alt="" width="30px" height="30px">
             <div style="flex-direction: column;">
                 <div class="feature-title">Unique Design</div>
                 <div class="feature-date">Jul 13 2025</div>
             </div>
             
         </div>
-        <div class="feature">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><rect x="4" y="8" width="16" height="8" stroke="#b6e94b" stroke-width="2"/><rect x="6" y="10" width="12" height="4" stroke="#b6e94b" stroke-width="2"/><rect x="8" y="12" width="8" height="2" stroke="#b6e94b" stroke-width="2"/></svg>
+        <div class="feature" style="position: relative;">
+            <img src="2.png" alt="" width="30px" height="30px">
             <div style="flex-direction: column;">
                 <div class="feature-title">Quality Materials</div>
                 <div class="feature-date">Jul 15 2025</div>
             </div>
             
         </div>
-        <div class="feature">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><rect x="7" y="7" width="10" height="10" stroke="#b6e94b" stroke-width="2"/><rect x="9" y="9" width="6" height="6" stroke="#b6e94b" stroke-width="2"/><rect x="11" y="11" width="2" height="2" stroke="#b6e94b" stroke-width="2"/></svg>
+        <div class="feature" style="position: relative; right: 150px;">
+            <img src="3.png" alt="" width="30px" height="30px">
             <div style="flex-direction: column;">
                 <div class="feature-title">High Print Quality</div>
                 <div class="feature-date">Jul 23 2025</div>
             </div>
             
         </div>
-        <div class="feature">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#b6e94b" stroke-width="2"/><circle cx="12" cy="12" r="6" stroke="#b6e94b" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="#b6e94b"/></svg>
+        <div class="feature" style="position: relative; right: 300px;">
+            <img src="4.png" alt="" width="30px" height="30px">
             <div style="flex-direction: column;">
                 <div class="feature-title">Good Reviews</div>
                 <div class="feature-date">Jul 27 2025</div>
@@ -187,7 +226,41 @@
     </div>
     <div class="article-box">
         <h2 style="font-family: Arial, Helvetica, sans-serif; margin-top: 0px; font-weight: lighter; color: white;">How it works?</h2>
-        <div ></div>
+        <div style="display: flex; gap: 20px; justify-content: center; align-items: center; margin-top: 20px;">
+            <div class="shirt">
+                <img src="shirt.png" alt="" height="400px" width="400px" style="border-radius: 10px; position: relative; top: 15px;left: 18px;">
+                <h1 style="font-family: Arial, Helvetica, sans-serif; margin-left:20px ; font-weight: lighter; color: black;">Unique T-Shirt</h1>
+                <div style="flex-direction: row;">
+                    <button class="get-started" style="position: relative;left: 270px;">View All
+                        <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" style="margin-left:8px;vertical-align:middle;"><path d="M5 12h14M13 6l6 6-6 6" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="buy" style="position: relative; top: -37px;left: 20px;">Buy for $59</button>  
+                </div>
+            </div>
+            <div class="para">
+                <p style="position: relative;top: 5px; left: 20px; font-family: Arial, Helvetica, sans-serif; color: grey; font-size: 15px;">Unique T-Shirt Design</p>
+                <div style="height:2px; background-color:rgb(227, 224, 224); width:90%;margin-top: 20px;margin-left: 20px;"></div>
+                <div class="article">
+                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 22px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita odit, perferendis aperiam enim nihil consectetur omnis voluptas aut maxime tempora, quasi cum, tempore maiores est? Esse doloribus modi accusantium repellendus!</p>
+                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 22px">Phasellus euismod maximus ipsum vehicula vehicula. Mauris posuere risus nec purus dapibus semper sed id ligula. Integer massa lorem, fringilla vel eros.</p>
+                </div>
+                <div style="flex-direction: row;">
+                    <button class="get-started" style="position: relative;left: 270px;top: 105px;">View All
+                        <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" style="margin-left:8px;vertical-align:middle;"><path d="M5 12h14M13 6l6 6-6 6" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="buy" style="position: relative; top: 68px;left: 20px;">Buy for $59</button>  
+                </div>    
+            </div>
+        </div>
+    </div>
+    <div class="About-us">
+        <div>
+            <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter; position: relative;left: 150px; top: 20px;">About Us</h1>
+        </div>
+        <div style="height:130px; background-color:rgb(203, 200, 200); width:1px;margin-top: 20px;margin-left: 20px; position: relative; position: relative;left: 150px;"></div>
+        <div class="last-article">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris felis elit, faucibus at tincidunt vel, ultrices vitae mauris. Pellentesque nec ante nisl. Praesent posuere dignissim nibh in finibus. Nunc rutrum nibh pellentesque, viverra dolor quis, sollicitudin libero. Duis non elit feugiat maximus.</p>
+        </div>
     </div>
 </body>
 </html>
