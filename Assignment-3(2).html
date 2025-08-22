@@ -45,7 +45,7 @@
     label {
       margin-bottom: 5px;
       font-size: 14px;
-      color: #333;
+      color: grey;
     }
 
     input, select {
@@ -58,12 +58,36 @@
     .gender-row {
       display: flex;
       align-items: center;
-      gap: 15px;
-      margin-top: 8px;
+      gap: 20px;
+      margin-top: 5px;
     }
 
-    .gender-row input {
-      margin-right: 5px;
+    .gender-row label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .gender-row input[type="radio"] {
+      display: none;
+    }
+
+    .gender-row span {
+      width: 14px;
+      height: 14px;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+      position: relative;
+    }
+
+    .gender-row input[type="radio"]:checked + span {
+      border-color: #4CAF50;
+      background-color: #4CAF50;
     }
 
     .submit-btn {
@@ -80,9 +104,6 @@
 
     .submit-btn:hover {
       background-color: #326bb8;
-    }
-    label{
-        color: grey;
     }
   </style>
 </head>
@@ -110,8 +131,14 @@
         <div class="field">
           <label>Gender</label>
           <div class="gender-row">
-            <label><input type="radio" name="gender" value="male"> Male</label>
-            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label>
+              <input type="radio" name="gender" value="male" checked>
+              <span></span> Male
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female">
+              <span></span> Female
+            </label>
           </div>
         </div>
       </div>
