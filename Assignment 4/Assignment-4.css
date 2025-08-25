@@ -1,0 +1,227 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #232227;
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
+
+    .navbar a{
+        position: relative;
+        color: #bbb;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+        color: white;
+    }
+
+    .navbar a::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;              
+        width: 0%;
+        height: 2px;
+        background: #0ff;          
+        transition: width 0.3s ease;
+    }
+
+    .navbar a:hover::after {
+        width: 100%;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo-box {
+      color: #0ff;
+      font-weight: bold;
+      padding: 8px;
+      border: white 2px solid;
+      margin-right: 10px;
+    }
+    .menu {
+      display: flex;
+      gap: 30px;
+    }
+    .menu a {
+      color: #bbb;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .menu a:hover, .menu a.active {
+      color: #fff;
+    }
+    .explore-btn {
+        position: relative;
+        top: -8px;
+        background: none;
+        padding: 10px;
+        border: 1px solid #bbb;
+        color: #bbb;
+        border-radius: 10px;
+    }
+
+    .midbox{
+        text-align: center;
+        margin-top: 200px;
+        position: absolute;
+        left: 330px
+    }
+
+    .midbox h1 {
+       margin-bottom: 20px;
+       font-size: 80px;
+       font-weight: bold;
+       background: linear-gradient(90deg, #0ff, #00ff99);
+       background-clip: text;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+    }
+
+    .midbox p {
+       margin-bottom: 30px;
+       font-size: 15px;
+       color: #bbb;
+    }
+
+    .midbox a {
+        position: relative;
+        color: #bbb;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        
+    }
+
+    .midbox a:hover {
+        color: white;
+    }
+
+    .midbox a::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;              
+        width: 0%;
+        height: 2px;
+        background: #0ff;          
+        transition: width 0.3s ease;
+    }
+
+    .midbox a:hover::after {
+        width: 100%;
+    }
+
+    .linegraph{
+        position: relative;
+        top: 500px;
+
+    }
+
+    .bottombox{
+        text-align: center;
+        margin-top: 200px;
+        position: absolute;
+        left: 390px;
+        top: 900px;
+    }
+
+    .bottombox h1 {
+       margin-bottom: 20px;
+       font-size: 40px;
+       font-weight: lighter;
+       background: linear-gradient(90deg, #0ff, #00ff99);
+       background-clip: text;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+    }
+
+    .bottombox p {
+       margin-bottom: 30px;
+       font-size: 15px;
+       color: #bbb;
+    }
+
+    .bottombox a {
+        position: relative;
+        color: #bbb;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        
+    }
+
+    .bottombox a:hover {
+        color: white;
+    }
+
+    .bottombox a::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;              
+        width: 0%;
+        height: 2px;
+        background: #0ff;          
+        transition: width 0.3s ease;
+    }
+
+    .bottombox a:hover::after {
+        width: 100%;
+    }
+
+    .oct {
+        position: relative;
+        top: -8px;
+        background: none;
+        width: 120px;
+        padding: 10px;
+        border: 1px solid #bbb;
+        color: #bbb;
+        border-radius: 50px;
+    }
+
+    .bargraph{
+        position: relative;
+        top: 900px;
+    }
+    .footbar{
+        position: relative;
+        top: 1200px;
+        display: flex;
+    }
+    .footbar p{
+        color: #bbb;
+        position: relative;
+    }
+    .footbar button{
+        
+        background: none;
+        border: none;
+    }
+    .prf h5, .rpt h5{
+        background: linear-gradient(90deg, rgb(10, 143, 143), #12a76b);
+       background-clip: text;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+        margin-left: 90px;
+        font-size: 20px
+    }
+    .prf:hover h5, .rpt:hover h5{
+        cursor: pointer;
+    }
