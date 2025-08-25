@@ -255,3 +255,91 @@
         margin: 50px;
         font-weight: lighter;
     }
+    /* Whale Section */
+.whale-section {
+    background: #fff;
+    color: #333;
+    text-align: center;
+    padding: 80px 100px;
+}
+
+.press-title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.whale-heading {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.whale-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.whale-card {
+    background: #fafafa;
+    padding: 30px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    position: relative;
+}
+
+.date-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    display: inline-block;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.date-box .day {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.date-box .month {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #b44ac0;
+    margin-top: -4px;
+}
+
+.whale-card h3 {
+    font-size: 16px;
+    color: #b44ac0;
+    margin-bottom: 15px;
+}
+
+.whale-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.read-btn {
+    background: none;
+    border: 1px solid #b44ac0;
+    color: #b44ac0;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.read-btn:hover {
+    background: #b44ac0;
+    color: #fff;
+}
