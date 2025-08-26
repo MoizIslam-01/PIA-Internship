@@ -63,7 +63,7 @@ function isvalid(email) {
 
     if (index <= 0) return false;
     if (email.indexOf("@", index + 1) !== -1) return false;
-
+    
     let firstpart = email.substring(0, index);
     let secondpart = email.substring(index + 1);
 
