@@ -329,7 +329,6 @@
         justify-content: space-evenly;
     }
     .rownav{
-        border: 1px solid black;
         width: 15%;
         display: flex;
         flex-direction: column;
@@ -362,4 +361,30 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+    }
+    .botlogo h2{
+        margin-top: 00px;
+        color: rgb(152, 4, 149);
+        border: 2px solid black;
+        padding: 5px;
+        position: relative;
+        right: 85px;
+        margin-top: 100px;
+    }
+    .bothead{
+        margin-top: 10px;
+        position: relative;
+        right: 215px;
+        margin-top: 110px;
+    }
+    .bothead p{
+        color: gray;
+    }
+    .links{
+        margin-top: 70px;
+    }
+    .links a{
+        color: gray;
+        text-decoration: none;
+        margin-right: 20px;
     }
