@@ -6,11 +6,12 @@ const reload = document.getElementById("Reload");
 const shot = document.getElementById("shot");
 const game = document.getElementById("game");
 const gameoverBox = document.getElementById("gameover");
-
+let gameoverflag = false;
 let score = 0;
 let Reload = 5;
 let bulletcount = 3;
 let gameInterval;
+let flyInterval = null; 
 
 function updateScore() {
   let paddedScore = score.toString().padStart(6, "0");
@@ -50,33 +51,64 @@ game.addEventListener("click", (e) => {
 
 function startGame() {
     score = 0;
+    Reload = 5;
+    bulletcount = 3;
+    gameoverflag = false;
+
     updateScore();
-    duck.style.display = "block";
-    moveDuck();
+    reload.textContent = "R=" + Reload;
+
     document.getElementById("game").classList.add("crosshair-cursor");
-    gameInterval = setInterval(moveDuck, 2000);
+    spawnDuck();
 }
 
 function gameOver() {
-  gameoverBox.classList.add("show");
-  scoreDisplay.classList.add("show-final")
-  reload.style.opacity="0";
-  shot.style.opacity="0";
-
+    gameoverBox.classList.add("show");
+    scoreDisplay.classList.add("show-final");
+    reload.style.opacity = "0";
+    shot.style.opacity = "0";
+    gameoverflag = true;
+    duck.style.display = "none";
 }
 
 
 function moveDuck() {
-    let x = Math.random() * (800 - 60);
+    let x = 0;
+    const movespeed = 5;  
+    const maxX = 800;
+
+    flyInterval = setInterval(() => {
+        if (gameoverflag) {
+            clearInterval(flyInterval);
+            return;
+        }
+
+        x += movespeed;
+        duck.style.left = x + "px";
+
+        if (x >= maxX) {
+            clearInterval(flyInterval);
+            spawnDuck(); 
+        }
+    }, 30);
+}
+
+function spawnDuck() {
     let y = Math.random() * (500 - 60);
-    duck.style.left = x + "px";
+    duck.style.left = "0px";
     duck.style.top = y + "px";
+    duck.style.display = "block";
+    moveDuck();
 }
 
 duck.addEventListener("click", () => {
-    score++;
-    scoreDisplay.textContent = "Score: " + score;
-    moveDuck();
+    if (!gameoverflag) {
+        clearInterval(flyInterval); 
+        score++;
+        updateScore();
+        duck.style.display = "none"; 
+        setTimeout(spawnDuck, 500);  
+    }
 });
 
 

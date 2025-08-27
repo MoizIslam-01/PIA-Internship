@@ -132,6 +132,17 @@ h1{
     position: absolute;
     width: 60px;
     height: 60px;
-    background: url('duck1.png') no-repeat center/cover; /* add duck image */
+    background: url('duck1.png') no-repeat center/cover; 
     display: none;
+    animation: flap 0.3s steps(1) infinite;
 }
+@keyframes flap {
+    0%   { background-image: url("duck1.png"); }
+    33%  { background-image: url("duck2.png"); }
+    66%  { background-image: url("duck3.png"); }
+    100% { background-image: url("duck1.png"); }
+}
+
+
+
+
