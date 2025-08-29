@@ -9,6 +9,7 @@ const audio = document.getElementById("audioplayer");
 const dog = document.getElementById("dog");
 const dog2 = document.getElementById("dog2");
 const dog3 = document.getElementById("dog3");
+const restartbtn = document.getElementById("restartbtn");
 
 let gameoverflag = false;
 let score = 0;
@@ -44,7 +45,8 @@ function updatereload() {
 }
 
 game.addEventListener("click", (e) => {
-  if (e.target.id === "startBtn" || Reload == 0) return;
+  if (e.target.id === "startBtn" || Reload == 0 || e.target.id === "restartbtn")
+    return;
   audio.play();
   updatereload();
 });
@@ -64,6 +66,7 @@ function startGame() {
 }
 
 function gameOver() {
+  restartbtn.style.display = "block";
   gameoverBox.classList.add("show");
   scoreDisplay.classList.add("show-final");
   reload.style.opacity = "0";
@@ -186,6 +189,12 @@ function hitDuck(duck) {
   }, 2000);
 }
 
+function restart() {
+  window.location.reload();
+}
+restartbtn.addEventListener("click", () => {
+  restart();
+});
 startBtn.addEventListener("click", () => {
   startBtn.style.transition = "opacity 0.5s ease";
   startBtn.style.opacity = "0";
