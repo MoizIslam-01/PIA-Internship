@@ -6,6 +6,9 @@ const shot = document.getElementById("shot");
 const game = document.getElementById("game");
 const gameoverBox = document.getElementById("gameover");
 const audio = document.getElementById("audioplayer");
+const dog = document.getElementById("dog");
+const dog2 = document.getElementById("dog2");
+const dog3 = document.getElementById("dog3");
 
 let gameoverflag = false;
 let score = 0;
@@ -55,7 +58,7 @@ function startGame() {
   reload.textContent = "R=" + Reload;
   document.getElementById("game").classList.add("crosshair-cursor");
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 5; i++) {
     setTimeout(spawnDuck, i * 1000);
   }
 }
@@ -68,23 +71,29 @@ function gameOver() {
   gameoverflag = true;
   document.querySelectorAll(".duck, .duckshot").forEach((d) => d.remove());
   if (score === 15) {
+    gameoverBox.innerHTML = "PERFECT SCORE";
     audio.pause();
     audio.currentTime = 0;
     audio.src = "Perfect.mp3";
     audio.load();
     audio.play();
+    gameoverBox.innerHTML = "PERFECT!!!";
+    dog3.style.display = "block";
   } else if (score === 0) {
     audio.pause();
     audio.currentTime = 0;
     audio.src = "Game Over.mp3";
     audio.load();
     audio.play();
+    dog.style.display = "block";
   } else {
     audio.pause();
     audio.currentTime = 0;
     audio.src = "Clear.mp3";
     audio.load();
     audio.play();
+    gameoverBox.innerHTML = "STAGE CLEAR";
+    dog2.style.display = "block";
   }
 }
 
@@ -122,7 +131,7 @@ function moveDuck(duck) {
   let x = parseInt(duck.style.left) || 0;
   let y = parseInt(duck.style.top) || 0;
 
-  let speedX = Math.floor(Math.random() * 10) + 5;
+  let speedX = Math.floor(Math.random() * 10) + 1;
   if (duck.dataset.direction === "left") {
     speedX = -speedX;
   }

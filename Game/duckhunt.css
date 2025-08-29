@@ -84,7 +84,7 @@ h1 {
 }
 #score.show-final {
     left: 50%;
-    top: 52%;
+    top: 32%;
     transform: translateX(-50%);
 }
 
@@ -102,7 +102,7 @@ h1 {
     opacity: 0;
 }
 #gameover.show {
-    top: 40%;
+    top: 20%;
     opacity: 1;
 }
 
@@ -146,6 +146,24 @@ h1 {
     33%  { background-image: url("duck2.png"); }
     66%  { background-image: url("duck3.png"); }
     100% { background-image: url("duck1.png"); }
+}
+#dog{
+    display: none;
+    position: absolute;
+    top: 314px;
+    left: 570px;
+}
+#dog2{
+    display: none;
+    position: absolute;
+    top: 339px;
+    left: 540px;
+}
+#dog3{
+    display: none;
+    position: absolute;
+    top: 314px;
+    left: 550px;
 }
 
 
